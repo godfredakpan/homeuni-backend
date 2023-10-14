@@ -1,0 +1,105 @@
+{
+    "books": [
+      {
+        "id": 1,
+        "title": "The Catcher in the Rye",
+        "author": "J.D. Salinger",
+        "price": 12.99,
+        "summary": "A classic novel about a young man named Holden Caulfield.",
+        "categories": ["Fiction", "Coming of Age"],
+        "isbn": "0316769487",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpg"
+      },
+      {
+        "id": 2,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "price": 14.99,
+        "summary": "A powerful story of racial injustice and moral growth.",
+        "categories": ["Fiction", "Legal Drama"],
+        "isbn": "0061120081",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpg"
+      },
+      {
+        "id": 3,
+        "title": "1984",
+        "author": "George Orwell",
+        "price": 10.99,
+        "summary": "A dystopian novel about government surveillance and control.",
+        "categories": ["Fiction", "Dystopian"],
+        "isbn": "0451524934",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpg"
+      },
+      {
+        "id": 4,
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "price": 11.99,
+        "summary": "A story of wealth, love, and the American Dream.",
+        "categories": ["Fiction", "Classic Literature"],
+        "isbn": "0743273567",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Moby-Dick",
+        "author": "Herman Melville",
+        "price": 15.99,
+        "summary": "The epic tale of Captain Ahab's obsession with a white whale.",
+        "categories": ["Fiction", "Adventure"],
+        "isbn": "1853260087",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpg"
+      },
+      {
+        "id": 6,
+        "title": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "price": 13.99,
+        "summary": "An adventurous journey to recover a dragon's treasure.",
+        "categories": ["Fiction", "Fantasy"],
+        "isbn": "0618260307",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpg"
+      },
+      {
+        "id": 7,
+        "title": "Harry Potter and the Sorcerer's Stone",
+        "author": "J.K. Rowling",
+        "price": 16.99,
+        "summary": "The first book in the magical series of Harry Potter.",
+        "categories": ["Fiction", "Fantasy"],
+        "isbn": "059035342X",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpg"
+      },
+      {
+        "id": 8,
+        "title": "The Lord of the Rings",
+        "author": "J.R.R. Tolkien",
+        "price": 19.99,
+        "summary": "The epic fantasy trilogy of the Ring's journey to destruction.",
+        "categories": ["Fiction", "Fantasy"],
+        "isbn": "0618640150",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "price": 9.99,
+        "summary": "A classic novel of love, manners, and society in early 19th-century England.",
+        "categories": ["Fiction", "Romance"],
+        "isbn": "0141439513",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpg"
+      },
+      {
+        "id": 10,
+        "title": "The Odyssey",
+        "author": "Homer",
+        "price": 12.99,
+        "summary": "The epic Greek poem of Odysseus' journey home after the Trojan War.",
+        "categories": ["Fiction", "Epic Poetry"],
+        "isbn": "0143039954",
+        "image": "https://ucarecdn.com/f4146766-e765-45a3-993d-c409fa83e11b/greatbooksforanytime20004ff4221eb1e54b659689fef7d5e265d5.jpgg"
+      }
+    ]
+  }
+  
