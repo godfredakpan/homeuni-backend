@@ -1,4 +1,4 @@
-// File: /Users/godfredakpan/Documents/LearnNow/src/app/layout.tsx
+// File: /Users/godfredakpan/Documents/projects/HomeUni/Admin/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

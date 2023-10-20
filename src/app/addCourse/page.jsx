@@ -9,6 +9,7 @@ import getAllCollections from "@/fauna/getCollections";
 
 const AddBook = () => {
   const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
   const [collections, setCollections] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -42,6 +43,7 @@ const AddBook = () => {
       title,
       url,
       category: categories,
+      description
     };
 
     const response = await createLesson(newLesson);
@@ -52,6 +54,7 @@ const AddBook = () => {
 
     setTitle("");
     setImage("");
+    setDescription("");
     setCategories([]);
     setCategoryId("");
   };
@@ -122,6 +125,22 @@ const AddBook = () => {
                   required
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="YouTube Link"
+                />
+              </div>
+
+              <div className="mb-6">
+                <label htmlFor="description" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                  Description
+                </label>
+                <input
+                  id="description"
+                  name="description"
+                  type="text"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  required
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Great Course!"
                 />
               </div>
 
