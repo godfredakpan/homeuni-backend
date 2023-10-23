@@ -7,7 +7,7 @@ import Link from "next/link";
 import Footer from "@/components/footer";
 import { ToastContainer } from "react-toastify";
 import getAllCourses from "../../fauna/getLessons";
-import ReactPlayer from 'react-player/youtube'
+import {ReactPlayer} from 'react-player/youtube'
 
 
 const Books = () => {
@@ -92,7 +92,6 @@ const Books = () => {
     setSortBy(selectedOption);
 
     if (selectedOption === "category") {
-      // If sorting by category, set the sortByCategory state
       const selectedCategory = e.target.options[e.target.selectedIndex].getAttribute("data-category");
       setSortByCategory(selectedCategory);
     } else {

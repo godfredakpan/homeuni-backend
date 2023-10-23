@@ -11,7 +11,7 @@ const AddBook = () => {
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
   const [collections, setCollections] = useState([]);
-  const [categories, setCategories] = useState([]);
+  const [category, setCategory] = useState("");
   const [categoryId, setCategoryId] = useState("");
   const [imageUploadLoading, setImageUploadLoading] = useState(false);
   const [image, setImage] = useState(null);
@@ -52,22 +52,23 @@ const AddBook = () => {
 
     setTitle("");
     setImage("");
-    setCategories([]);
+    setCategory([]);
     setCategoryId("");
   };
 
   const handleCategoryChange = (e) => {
     const selectedCategory = e.target.value;
-    if (!categories.includes(selectedCategory)) {
-      setCategories([...categories, selectedCategory]);
-    }
+    setCategory(selectedCategory)
+    // if (!categories.includes(selectedCategory)) {
+    //   setCategory([...categories, selectedCategory]);
+    // }
     setCategoryId("");
   };
 
   const removeCategory = (index) => {
-    const updatedCategories = [...categories];
-    updatedCategories.splice(index, 1);
-    setCategories(updatedCategories);
+    // const updatedCategories = [...categories];
+    // updatedCategories.splice(index, 1);
+    setCategory('');
   };
 
   return (
@@ -145,8 +146,8 @@ const AddBook = () => {
                 </select>
               </div>
               <div className="m-6">
-                Selected Categories:
-                {categories.map((category, index) => (
+                Selected Categories: {category}
+                {/* {categories.map((category, index) => (
                   <span
                     key={index}
                     className="ml-2 text-white-900 cursor-pointer clickable-category underline"
@@ -154,7 +155,7 @@ const AddBook = () => {
                   >
                     {category} (x)
                   </span>
-                ))}
+                ))} */}
               </div>
             {/* </div> */}
             <div>
