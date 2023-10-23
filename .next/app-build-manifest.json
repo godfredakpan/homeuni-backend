@@ -12,10 +12,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/courses/page": [
+    "/addCourse/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/courses/page.js"
+      "static/css/app/addCourse/page.css",
+      "static/chunks/app/addCourse/page.js"
     ],
     "/login/page": [
       "static/chunks/webpack.js",
@@ -27,12 +28,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/collections/page.js"
-    ],
-    "/addCourse/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/addCourse/page.css",
-      "static/chunks/app/addCourse/page.js"
     ]
   }
 }
