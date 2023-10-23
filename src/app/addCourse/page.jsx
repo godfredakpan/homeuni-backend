@@ -41,7 +41,7 @@ const AddBook = () => {
     const newLesson = {
       title,
       url,
-      category: categories,
+      category: category,
     };
 
     const response = await createLesson(newLesson);
