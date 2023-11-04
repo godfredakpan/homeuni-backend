@@ -12,11 +12,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/addCourse/page": [
+    "/addCollection/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/addCourse/page.css",
-      "static/chunks/app/addCourse/page.js"
+      "static/css/app/addCollection/page.css",
+      "static/chunks/app/addCollection/page.js"
     ],
     "/login/page": [
       "static/chunks/webpack.js",

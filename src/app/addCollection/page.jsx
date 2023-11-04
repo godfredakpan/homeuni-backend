@@ -142,6 +142,16 @@ const addCollection = () => {
                   <option value="" disabled>
                     Select a category
                   </option>
+                  <option value="AI">AI</option>
+                  <option value="UI-UX">UI/UX</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="Virtual Assistance">Virtual Assistance</option>
+                  <option value="Product Management">Product Management</option>
+                  <option value="Communication">Communication</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="CSS">CSS</option>
+                  <option value="Python">Python</option>
+                  <option value="PHP">PHP</option>
                   <option value="Mathematics">Mathematics</option>
                   <option value="Science">Science</option>
                   <option value="History">History</option>
