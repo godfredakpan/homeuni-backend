@@ -5,12 +5,16 @@ import ReactPaginate from 'react-paginate';
 import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/footer";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import getAllCourses from "../../fauna/getLessons";
-import {ReactPlayer} from 'react-player/youtube'
+// import {ReactPlayer} from 'react-player/youtube'
+import dynamic from 'next/dynamic';
 
+import deleteCollection from '../../fauna/deleteCollection'
 
-const Books = () => {
+const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
+
+const Courses = () => {
   const [allLessons, setCollection] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
@@ -19,12 +23,19 @@ const Books = () => {
   const [filteredBooks, setFilteredLessons] = useState([]); // State to store filtered books
   const [sortBy, setSortBy] = useState(""); // State to store the selected sort option
   const [sortByCategory, setSortByCategory] = useState(""); // State to store the selected category for sorting
-
+  const [hasWindow, setHasWindow] = React.useState(false);
   useEffect(() => {
     if (!getUser()) {
       window.location.href = "/login";
     }
   }, []);
+
+
+    React.useEffect(() => {
+      if (typeof window !== "undefined") {
+        setHasWindow(true);
+      }
+    }, []);
 
   useEffect(() => {
     async function fetchData() {
@@ -41,13 +52,23 @@ const Books = () => {
     fetchData();
   }, []);
 
-  const deleteBookFunction = async (bookId) => {
-      // const response = await deleteBook(bookId);
-
-      // if (response) {
-      //   toast.success("Book deleted successfully");
-      // }
+  const deleteFunction = async (id) => {
+    // Display a confirmation dialog
+    const userConfirmed = window.confirm("Are you sure you want to delete this item?");
+  
+    // Check if the user confirmed
+    if (userConfirmed) {
+      const response = await deleteCollection('lessons', id);
+  
+      if (response) {
+        toast.success("Course deleted successfully");
+      }
+    } else {
+      // Handle the case where the user canceled the deletion
+      toast.info("Deletion canceled");
+    }
   };
+  
 
   const handlePageChange = (selectedPage) => {
     setCurrentPage(selectedPage.selected);
@@ -56,8 +77,7 @@ const Books = () => {
   useEffect(() => {
     // Filter books based on the search term
     const filtered = allLessons.filter((lesson) =>
-      lesson.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      lesson.category.toLowerCase().includes(searchTerm.toLowerCase())
+      lesson.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
     // Sort books based on the selected option
@@ -180,19 +200,24 @@ const Books = () => {
                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={lesson.id}>
                   <td className="px-6 py-4">{lesson?.title}</td>
                   <td className="px-6 py-4">{lesson?.category}</td>
+
                   <td className="px-6 py-4">
-                  <ReactPlayer controls={true} width={300} height={200} url={lesson?.url} /></td>
+                  {hasWindow && (
+                  <ReactPlayer controls={true} width={300} height={200} url={lesson?.url} />
+                  )}
+                  </td>
+                  
                   <td className="px-6 py-4">
-                    <Link
+                    {/* <Link
                       className="bg-blue-500 text-white px-2 py-1 rounded mr-1"
                       href={{
                         pathname: 'editBook',
                         query: { id: lesson.id },
                       }}
-                    >Edit</Link>
+                    >Edit</Link> */}
                     <button
                       className="bg-red-500 text-white px-2 py-1 rounded"
-                      onClick={() => deleteBookFunction(lesson.id)}
+                      onClick={() => deleteFunction(lesson.id)}
                     >
                       Delete
                     </button>
@@ -222,4 +247,4 @@ const Books = () => {
   );
 };
 
-export default Books;
+export default Courses;

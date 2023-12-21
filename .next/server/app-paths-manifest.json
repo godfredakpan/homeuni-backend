@@ -1,6 +1,8 @@
 {
-  "/page": "app/page.js",
-  "/login/page": "app/login/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/addCourse/page": "app/addCourse/page.js",
   "/collections/page": "app/collections/page.js",
-  "/addCollection/page": "app/addCollection/page.js"
+  "/users/page": "app/users/page.js",
+  "/courses/page": "app/courses/page.js",
+  "/editBook/page": "app/editBook/page.js"
 }
