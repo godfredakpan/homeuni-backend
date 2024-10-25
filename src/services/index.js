@@ -1,7 +1,8 @@
 import request from 'umi-request';
 
-const API_URL = 'https://hrmaneja.eu-4.evennode.com/api/v1'
+// const API_URL = 'https://hrmaneja.eu-4.evennode.com/api/v1'
 // const API_URL = 'http://localhost:5050/api/v1'
+const API_URL = 'https://hrapi-i921.onrender.com/api/v1'
 
 const USER_TOKEN = process.env.USER_TOKEN
 
